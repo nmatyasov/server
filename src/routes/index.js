@@ -1,7 +1,7 @@
 const express = require("express");
 const asyncHandler = require("express-async-handler");
 const { StatusCodes } = require("http-status-codes");
-const { BadRequestError } = require("../utils/errors");
+const CustomError = require("../utils/errors");
 
 const router = express.Router();
 
@@ -33,7 +33,7 @@ router.get(
 router.get(
   "*",
   asyncHandler(async (req, res, next) => {
-    throw new BadRequestError("what???");
+    throw new CustomError.BadRequestError("what???");
   })
 );
 
