@@ -51,7 +51,7 @@ const initializeApp = () => {
   // Enable cross-origin access through the CORS middleware
   app.use(
     cors({
-      origin: config.allowedOrigin,
+      origin: "http://localhost:3000",
     })
   );
   //DDos
